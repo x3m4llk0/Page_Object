@@ -6,3 +6,6 @@ class MainPageLocators():
 
 class LoginPageLocators():
     pass
+
+class ProductPageLocators():
+    BASKET_LINK = (By.CLASS_NAME, "btn-add-to-basket")
