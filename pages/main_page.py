@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
+from pages.locators import MainPageLocators
 
 
 class MainPage(BasePage):
@@ -8,4 +9,4 @@ class MainPage(BasePage):
         login_link.click()
 
     def should_be_login_link(self):
-        self.browser.find_element(By.CSS_SELECTOR, "#login_link")
+        assert self.is_element_present(*MainPageLocators.LOGIN_LINK), "Login link is not presented"
